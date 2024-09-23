@@ -109,10 +109,10 @@ const Steps = () => (
 
 const StepCard = ({ title, description, img, bgclr, txt }) => (
   <div style={{ backgroundColor: `#${bgclr}` }} className="p-6 text-center md:w-60">
-    <div style={{ color: `#${txt}` }} className="text-4xl flex justify-center mb-4">
+    <div  className="text-4xl flex justify-center mb-4">
       <img src={img} alt="" />
     </div>
-    <h3 className="font-bold text-white text-lg">{title}</h3>
+    <h3 style={{ color: `#${txt}` }} className="font-bold text-white text-lg">{title}</h3>
     <p style={{ color: `#${txt}` }} className="mt-2">{description}</p>
   </div>
 );
