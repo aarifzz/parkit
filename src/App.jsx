@@ -110,7 +110,7 @@ const Steps = () => (
 const StepCard = ({ title, description,img,back,txt }) => (
   <div className={`p-6 bg-[#${back}] text-center md:w-60`}>
     <div className={`text-[#${txt}] text-4xl flex justify-center mb-4`}><img src={img} alt="" /></div>
-    <h3 className={`font-bold text-[#${txt}] text-lg`}>{title}</h3>
+    <h3 className={`font-bold text-[#FFFFFF] text-lg`}>{title}</h3>
     <p className={`text-[#${txt}] mt-2`}>{description}</p>
   </div>
 );
