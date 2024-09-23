@@ -36,7 +36,7 @@ const Header = () => (
 );
 
 const HeroSection = () => (
-  <section className=" py-16 px-4 md:px-0">
+  <section className=" py-16 px-4 md:px-0 h-screen">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
       <div className="text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold text-black">Your Space, Your Time</h1>
@@ -96,23 +96,25 @@ const AboutUs = () => (
 const Steps = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto">
-      <h2 className="text-3xl font-bold text-center">Steps to Follow</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">Steps to Follow</h2>
       <div className="flex flex-col md:flex-row justify-center space-y-10 md:space-y-0  mt-10" >
-        <StepCard title="Select Parking Spot" description="Choose a nearby parking lot and set your parking duration." img="/s1.png" back="F9C935" txt='000000' />
-        <StepCard title="Payment" description="Complete your booking through our secure payment gateway." img="/pay.png" back="535353" txt='FFFFFF' />
-        <StepCard title="Scan QR at Parking Lot" description="Present your QR code at the entrance for a smooth check-in." img="/qr.png" back="000000" txt='F9C935'/>
-        <StepCard title="Enjoy Stress-Free Parking" description="Relax knowing your parking spot is ready when you arrive." img="/happy.png" back="D9D9D9" txt='535353' />
+        <StepCard title="Select Parking Spot" description="Choose a nearby parking lot and set your parking duration." img="/s1.png" bgclr="F9C935" txt='000000' />
+        <StepCard title="Payment" description="Complete your booking through our secure payment gateway." img="/pay.png" bgclr="535353" txt='FFFFFF' />
+        <StepCard title="Scan QR at Parking Lot" description="Present your QR code at the entrance for a smooth check-in." img="/qr.png" bgclr="000000" txt='F9C935'/>
+        <StepCard title="Enjoy Stress-Free Parking" description="Relax knowing your parking spot is ready when you arrive." img="/happy.png" bgclr="D9D9D9" txt='535353' />
       </div>
     </div>
   </section>
 );
 
-const StepCard = ({ title, description,img,back,txt }) => (
-  <div className={`p-6 bg-[#${back}] text-center md:w-60`}>
-    <div className={`text-[#${txt}] text-4xl flex justify-center mb-4`}><img src={img} alt="" /></div>
-    <h3 className={`font-bold text-[#FFFFFF] text-lg`}>{title}</h3>
-    <p className={`text-[#${txt}] mt-2`}>{description}</p>
-  </div>
+const StepCard = ({ title, description, img, bgclr, txt }) => (
+  <div style={{ backgroundColor: `#${bgclr}` }} className="p-6 text-center md:w-60">
+    <div style={{ color: `#${txt}` }} className="text-4xl flex justify-center mb-4">
+      <img src={img} alt="" />
+    </div>
+    <h3 className="font-bold text-white text-lg">{title}</h3>
+    <p style={{ color: `#${txt}` }} className="mt-2">{description}</p>
+  </div>
 );
 
 const Footer = () => (
