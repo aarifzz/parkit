@@ -7,18 +7,22 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ContactUsPage from '../components/ContactUsPage';
 import BookNowPage from '../components/BookNowPage';
 import Reserve from '../components/Reserve';
+import Chatbot from '../components/Chatbot';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
+        <Link to="/chatbot" className="text-black font-semibold"><img  onClick="" className="absolute bottom-0 right-0 m-10" width={100} src="/bot.png" alt="" /></Link>
+        
         
         <Routes>
           <Route path="/" element={<HeroSection />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUsPage/>} />
           <Route path="/booking" element={<BookNowPage/>} />
+          <Route path="/chatbot" element={<Chatbot/>} />
           <Route path="/booking/reserve" element={<Reserve/>} />
           {/* You can add more routes as needed */}
         </Routes>
