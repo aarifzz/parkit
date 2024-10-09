@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaHistory } from "react-icons/fa";
 
 const parkingLots = [
   {
@@ -168,6 +169,11 @@ const parkingLots = [
 
 const BookNowPage = () => (
   <section className="py-16 bg-white w-full">
+    <div className='p-4 flex justify-end'>
+        <Link to="/booking/history" className='cursor-pointer'>
+        <FaHistory size={30} />
+        </Link>
+    </div>
     <div className="container mx-auto flex flex-col md:flex-row">
       <div className="md:w-1/3 p-6">
         <h2 className="text-3xl font-bold text-center">Available Parking Lots</h2>
@@ -187,10 +193,10 @@ const BookNowPage = () => (
           ))}
         </div>
       </div>
-      <div className="md:w-2/3 p-4">
+      <div className="w-full p-4">
         <h2 className="text-2xl font-bold text-center">Map View</h2>
         <iframe
-          src={`https://www.google.com/maps/embed/v1/chennai?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&center=13.0827,80.2707&zoom=12&maptype=satellite`}
+          src="https://www.openstreetmap.org/export/embed.html?bbox=80.2500%2C13.0300%2C80.2900%2C13.0900&layer=mapnik&marker=13.0827%2C80.2707"
           width="100%"
           height="600"
           style={{ border: 0 }}
@@ -199,7 +205,7 @@ const BookNowPage = () => (
           className='rounded-xl'
         ></iframe>
         </div>
-    </div>
+    </div>a
   </section>
 );
 
